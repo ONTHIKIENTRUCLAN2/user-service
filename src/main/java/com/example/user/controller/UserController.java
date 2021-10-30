@@ -19,6 +19,9 @@ public class UserController {
 
     @GetMapping("/{id}")
     public ResponseTemplateVO getUserWithDepartment(@PathVariable("id") Long userId){
+        for(int i =0; i<10;i++){
+            System.out.println(i + " " +userService.getUserWithDepartment(userId));
+        }
         return userService.getUserWithDepartment(userId);
     }
 }
