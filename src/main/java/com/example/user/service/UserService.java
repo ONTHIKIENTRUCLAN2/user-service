@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import javax.persistence.Cacheable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -47,6 +48,7 @@ public class UserService {
         return userPrincipal;
 
     }
+
 
     public ResponseTemplateVO getUserWithDepartment(Long userId){
         ResponseTemplateVO vo = new ResponseTemplateVO();
